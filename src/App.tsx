@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 import FunctionComponent from './examples/FunctionComponent';
+import StateWithTS from './examples/StateWithTS';
+import Video10 from './examples/Ex_Type/Video10';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -25,7 +27,9 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">
-        <FunctionComponent />
+        {/* <FunctionComponent /> */}
+        {/* <StateWithTS /> */}
+        <Video10 />
       </p>
     </div>
   );

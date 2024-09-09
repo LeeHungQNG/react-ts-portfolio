@@ -1,8 +1,8 @@
 import React from 'react';
 
 const FunctionComponent = () => {
-  const name = 'LeeHung';
-  return <div>FunctionComponent with {name}</div>;
+  const name123 = 'LeeHung';
+  return <div>FunctionComponent with {name123}</div>;
 };
 
 export default FunctionComponent;
