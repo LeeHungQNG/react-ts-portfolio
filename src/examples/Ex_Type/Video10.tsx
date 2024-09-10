@@ -18,6 +18,7 @@ const Video10 = (props: IProps) => {
   const [age, setAge] = useState<number | string>(defaultAge);
 
   const [city, setCity] = useState<string[]>(['Hà Nội', 'Đà Nẵng', 'Hồ Chí Minh']);
+  const [selectedCity, setSelectedCity] = useState<string>('Hồ Chí Minh');
 
   const [users, setUsers] = useState<IUser[]>([
     { name: 'Eric', age: 25, city: 'Hà Nội' },
@@ -27,6 +28,14 @@ const Video10 = (props: IProps) => {
 
   const [isShowBtn, setIsShowBtn] = useState<boolean>(false);
 
+  const handleSubmitForm = (event: React.FormEvent<HTMLInputElement>) => {
+    event.preventDefault();
+  };
+
+  const handleOnChangeName = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setName(event.target.value);
+  };
+
   return (
     <>
       <div>Example video 10: hello world </div>
@@ -34,21 +43,25 @@ const Video10 = (props: IProps) => {
         <div>
           <label>Name:</label>
           <br />
-          <input type="text" value={name} />
+          <input type="text" value={name} onChange={handleOnChangeName} />
           <br />
         </div>
         <div>
           <label>Age:</label>
           <br />
-          <input type="text" value={age} />
+          <input type="text" value={age} onChange={(event) => setAge(event.target.value)} />
           <br />
         </div>
         <div>
           <label>City:</label>
           <br />
-          <select>
+          <select onChange={(event) => setSelectedCity(event.target.value)}>
             {city.map((item, index) => {
-              return <option key={index}>{item}</option>;
+              return (
+                <option key={index} value={item}>
+                  {item}
+                </option>
+              );
             })}
           </select>
           {/* <select>
@@ -58,7 +71,7 @@ const Video10 = (props: IProps) => {
           </select> */}
         </div>
 
-        <input type="submit" value="Submit" style={{ margin: '10px 0' }} />
+        <input type="submit" value="Submit" style={{ margin: '10px 0' }} onClick={handleSubmitForm} />
       </div>
       <hr />
       <div>List Users:</div>
