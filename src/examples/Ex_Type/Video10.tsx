@@ -3,7 +3,7 @@ import './Video10.css';
 
 interface IUser {
   name: string;
-  age: number;
+  age: number | string;
   city: string;
 }
 
@@ -29,7 +29,19 @@ const Video10 = (props: IProps) => {
   const [isShowBtn, setIsShowBtn] = useState<boolean>(false);
 
   const handleSubmitForm = (event: React.FormEvent<HTMLInputElement>) => {
-    event.preventDefault();
+    // event.preventDefault();
+    const user = {
+      name: name,
+      age: age,
+      city: selectedCity,
+    };
+
+    // users.push(user); // modify state direcly => not recommend
+    // setUsers(users);
+
+    setUsers([...users, user]);
+    setName('');
+    setAge('');
   };
 
   const handleOnChangeName = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -55,7 +67,7 @@ const Video10 = (props: IProps) => {
         <div>
           <label>City:</label>
           <br />
-          <select onChange={(event) => setSelectedCity(event.target.value)}>
+          <select onChange={(event) => setSelectedCity(event.target.value)} defaultValue={selectedCity}>
             {city.map((item, index) => {
               return (
                 <option key={index} value={item}>
