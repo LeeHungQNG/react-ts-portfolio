@@ -1,13 +1,13 @@
 import React from 'react';
 
 interface IProps {
-  name: string;
-  age: number;
-  address: string;
+  name?: string;
+  age?: number;
+  address?: string; // ? =>  optional: có thể có hoặc không
 }
 
 const PropsWithTS = (props: IProps) => {
-  const { name, age, address } = props;
+  const { name, age = 18, address = 'Quảng Ngãi' } = props; // default props
   return (
     <div>
       My name is {name}

@@ -31,7 +31,11 @@ function App() {
         {/* <FunctionComponent /> */}
         {/* <StateWithTS /> */}
         {/* <Video10 /> */}
-        <PropsWithTS name={'Quoc Hung'} age={24} address={'Ho Chi Minh'} />
+        <PropsWithTS
+          name={'Quoc Hung'}
+          // age={24}
+          //address={'Ho Chi Minh'}
+        />
       </p>
     </div>
   );
