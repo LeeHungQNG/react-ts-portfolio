@@ -5,6 +5,7 @@ import './App.css';
 import FunctionComponent from './examples/FunctionComponent';
 import StateWithTS from './examples/StateWithTS';
 import Video10 from './examples/Ex_Type/Video10';
+import PropsWithTS from './examples/PropsWithTS';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -29,7 +30,8 @@ function App() {
       <p className="read-the-docs">
         {/* <FunctionComponent /> */}
         {/* <StateWithTS /> */}
-        <Video10 />
+        {/* <Video10 /> */}
+        <PropsWithTS name={'Quoc Hung'} age={24} address={'Ho Chi Minh'} />
       </p>
     </div>
   );
