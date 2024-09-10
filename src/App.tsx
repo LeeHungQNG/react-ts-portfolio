@@ -30,7 +30,7 @@ function App() {
       <p className="read-the-docs">
         {/* <FunctionComponent /> */}
         {/* <StateWithTS /> */}
-        {/* <Video10 /> */}
+        <Video10 defaultName={'HungLee'} defaultAge={24} />
         <PropsWithTS
           name={'Quoc Hung'}
           // age={24}

@@ -7,9 +7,16 @@ interface IUser {
   city: string;
 }
 
-const Video10 = () => {
-  const [name, setName] = useState<string>('');
-  const [age, setAge] = useState<number | string>('');
+interface IProps {
+  defaultName: string;
+  defaultAge: number | string;
+}
+
+const Video10 = (props: IProps) => {
+  const { defaultName, defaultAge } = props;
+  const [name, setName] = useState<string>(defaultName);
+  const [age, setAge] = useState<number | string>(defaultAge);
+
   const [city, setCity] = useState<string[]>(['Hà Nội', 'Đà Nẵng', 'Hồ Chí Minh']);
 
   const [users, setUsers] = useState<IUser[]>([
