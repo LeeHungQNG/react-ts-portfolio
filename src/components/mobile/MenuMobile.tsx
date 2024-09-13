@@ -1,43 +1,90 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import logo from '@/assets/img/logo/mobile_logo.png';
 const MenuMobile = () => {
+  const [activeTab, setActiveTab] = useState<string>('');
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const style = {
+    overflow: 'hidden',
+    display: isOpen ? 'block' : 'none',
+    transition: '2s',
+  };
+
+  const handleClickTab = (tab: string, event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    setActiveTab(tab);
+    event.preventDefault();
+    const section = document.querySelector(`#${tab}`);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => {
+        window.location.hash = tab;
+      }, 1000);
+    }
+  };
   return (
     <>
       <div className="arlo_tm_mobile_header_wrap">
         <div className="main_wrap">
           <div className="logo">
             <a href="index.html">
-              <img src="img/logo/mobile_logo.png" alt="mobile_logo" />
+              <img src={logo} alt="mobile_logo" />
             </a>
           </div>
           <div className="arlo_tm_trigger">
-            <div className="hamburger hamburger--collapse-r">
+            <div className={isOpen ? 'hamburger hamburger--collapse-r is-active' : 'hamburger hamburger--collapse-r'}>
               <div className="hamburger-box">
-                <div className="hamburger-inner"></div>
+                <div className="hamburger-inner" onClick={() => setIsOpen(!isOpen)}></div>
               </div>
             </div>
           </div>
         </div>
-        <div className="arlo_tm_mobile_menu_wrap">
+        <div className="arlo_tm_mobile_menu_wrap" style={style}>
           <div className="mob_menu">
             <ul className="anchor_nav">
               <li>
-                <a href="#home">Home</a>
+                <a
+                  href="#home"
+                  className={activeTab === 'home' ? 'active' : ''}
+                  onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleClickTab('home', event)}
+                >
+                  Home
+                </a>
               </li>
               <li>
-                <a href="#about">About</a>
+                <a
+                  href="#about"
+                  className={activeTab === 'about' ? 'active' : ''}
+                  onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleClickTab('about', event)}
+                >
+                  About
+                </a>
               </li>
               <li>
-                <a href="#services">Services</a>
+                <a
+                  href="#skills"
+                  className={activeTab === 'skills' ? 'active' : ''}
+                  onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleClickTab('skills', event)}
+                >
+                  Skills
+                </a>
               </li>
               <li>
-                <a href="#portfolio">Portfolio</a>
+                <a
+                  href="#project"
+                  className={activeTab === 'project' ? 'active' : ''}
+                  onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleClickTab('project', event)}
+                >
+                  Projects
+                </a>
               </li>
               <li>
-                <a href="#news">News</a>
-              </li>
-              <li>
-                <a href="#contact">Contact</a>
+                <a
+                  href="#contact"
+                  className={activeTab === 'contact' ? 'active' : ''}
+                  onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleClickTab('contact', event)}
+                >
+                  Contact
+                </a>
               </li>
             </ul>
           </div>
