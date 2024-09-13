@@ -69,7 +69,7 @@ const Skill = () => {
                   <div className="arlo_tm_progress_wrap" data-size="small" data-round="c" data-strip="off">
                     <div className="arlo_tm_progress" data-value="95" data-color="#000">
                       <span>
-                        <span className="label">ExpressJS</span>
+                        <span className="label">NodeJS (ExpressJS)</span>
                       </span>
                       <div className="arlo_tm_bar_bg">
                         <ProgressBar completed={70} bgColor={'#333'} height={'8px'} isLabelVisible={false} />
