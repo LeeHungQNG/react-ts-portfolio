@@ -5,7 +5,7 @@ import { TypeAnimation } from 'react-type-animation';
 const About = () => {
   return (
     <>
-      <div className="arlo_tm_section relative" id="about">
+      <div className="arlo_tm_section relative" id="about" style={{ paddingTop: 100 }}>
         <div className="arlo_tm_about_wrapper_all">
           <div className="container">
             <div className="arlo_tm_title_holder">
@@ -18,7 +18,11 @@ const About = () => {
                   <div className="about_image_wrap parallax" data-relative-input="true">
                     <div className="image layer" data-depth="0.1">
                       <img src={avatarBg} alt="550x640" />
-                      <div className="inner" data-img-url={avatarBg}></div>
+                      <div
+                        className="inner"
+                        // data-img-url={avatarBg}
+                        style={{ backgroundImage: `url(${avatarBg})` }}
+                      ></div>
                     </div>
                     <div className="border layer" data-depth="0.2">
                       <img src="img/about/550x640.jpg" alt="550x640" />

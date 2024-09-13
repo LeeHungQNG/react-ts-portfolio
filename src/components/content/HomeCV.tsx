@@ -2,6 +2,13 @@ import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 
 const HomeCV = () => {
+  const handleScrollToAbout = () => {
+    const section = document.querySelector('#about');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <>
       <div className="arlo_tm_section" id="home">
@@ -45,7 +52,13 @@ const HomeCV = () => {
                 </div>
               </div>
             </div>
-            <div className="arlo_tm_arrow_wrap bounce anchor">
+            <div
+              className="arlo_tm_arrow_wrap bounce anchor"
+              onClick={(event) => {
+                event.preventDefault();
+                handleScrollToAbout();
+              }}
+            >
               <a href="#about">
                 <i className="xcon-angle-double-down"></i>
               </a>
