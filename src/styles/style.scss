@@ -693,7 +693,7 @@ img.svg {
     box-sizing: border-box;
   }
   .overlay_image.hero {
-    background-image: url(../img/hero/2.jpg);
+    background-image: url(../assets/img/hero/2.jpg);
   }
   .overlay_color.hero {
     background-color: $background-color_4;
@@ -702,7 +702,7 @@ img.svg {
     height: 100vh;
   }
   .overlay_image.testimonial {
-    background-image: url(../img/hero/3.jpg);
+    background-image: url(../assets/img/hero/3.jpg);
   }
   .overlay_color.testimonial {
     background-color: $background-color_4;
@@ -2229,7 +2229,7 @@ img.svg {
 .arlo_tm_universal_box_wrap.particle {
   height: 100vh;
   position: relative;
-  background-image: url(../img/hero/2.jpg);
+  background-image: url(../assets/img/hero/2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2248,7 +2248,7 @@ img.svg {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url(../img/hero/2.jpg);
+  background-image: url(../assets/img/hero/2.jpg);
   position: relative;
   .overlay {
     position: absolute;
@@ -2300,7 +2300,7 @@ img.svg {
       z-index: 20;
     }
     .overlay_image.top {
-      background-image: url(../img/hero/2.jpg);
+      background-image: url(../assets/img/hero/2.jpg);
     }
     .overlay_color.top {
       background-color: $background-color_11;

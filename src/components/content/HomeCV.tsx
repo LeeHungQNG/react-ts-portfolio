@@ -1,6 +1,6 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
-
+import avatarCV from '@/assets/img/hero/avatar_cv.jpg';
 const HomeCV = () => {
   const handleScrollToAbout = () => {
     const section = document.querySelector('#about');
@@ -21,7 +21,7 @@ const HomeCV = () => {
             <div className="content hero">
               <div className="inner_content">
                 <div className="image_wrap">
-                  <img src="img/hero/avatar_cv.jpg" alt="hero" />
+                  <img src={avatarCV} alt="hero" />
                 </div>
                 <div className="name_holder">
                   <h3>
