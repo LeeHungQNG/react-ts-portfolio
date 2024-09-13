@@ -1,5 +1,4 @@
 import React from 'react';
-import 'components/content/Skill.scss';
 import ProgressBar from '@ramonak/react-progress-bar';
 
 const Skill = () => {
