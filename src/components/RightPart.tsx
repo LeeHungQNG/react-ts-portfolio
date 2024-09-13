@@ -27,6 +27,8 @@ const RightPart = () => {
           {/*<!-- CONTACT & FOOTER -->*/}
           <Contact />
           {/*<!-- /CONTACT & FOOTER -->*/}
+
+       
         </div>
       </div>
     </>

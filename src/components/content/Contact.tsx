@@ -80,7 +80,7 @@ const Contact = () => {
           </div>
           <div className="arlo_tm_footer_wrap">
             <div className="container">
-              <p>&copy; Copyright 2019. All Rights are Reserved.</p>
+              <p>&copy; Copyright 2024 by LeeHungQNG. All Rights are Reserved.</p>
             </div>
           </div>
         </div>
