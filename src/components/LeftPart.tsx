@@ -1,5 +1,6 @@
 import React from 'react';
 import desktopLogo from '@/assets/img/logo/react.png';
+
 const LeftPart = () => {
   return (
     <>
@@ -25,7 +26,7 @@ const LeftPart = () => {
                 <a href="#project">Projects</a>
               </li>
               <li>
-                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -33,7 +34,7 @@ const LeftPart = () => {
             <div className="social_wrap">
               <ul>
                 <li>
-                  <a href="#">
+                  <a href="https://www.facebook.com/builequochung/" target="_blank">
                     <i className="xcon-facebook"></i>
                   </a>
                 </li>
@@ -48,13 +49,13 @@ const LeftPart = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://www.instagram.com/leehung3004/">
                     <i className="xcon-instagram"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    <i className="xcon-behance"></i>
+                  <a href="mailto:builequochung3004@gmail.com">
+                    <i className="xcon-google"></i>
                   </a>
                 </li>
               </ul>
